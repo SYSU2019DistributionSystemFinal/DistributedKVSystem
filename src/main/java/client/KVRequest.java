@@ -6,7 +6,7 @@ public class KVRequest implements Serializable {
     public static int PUT = 0;
     public static int GET = 1;
     public static int DEL = 2;
-    //request的类型，PUT or GET
+    //request的类型，PUT or GET or DEL
     private int type;
 
     private String key;
