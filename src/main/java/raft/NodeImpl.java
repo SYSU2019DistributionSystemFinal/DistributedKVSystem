@@ -338,7 +338,6 @@ public class NodeImpl<T> implements Node<T>,NodeChange {
                                 LOGGER.warn("follower [{}] 的term [{}] 比我大, 我的term是 [{}], 所以我将成为follower",
                                         peer, result.getTerm(), currentTerm);
                                 currentTerm = result.getTerm();
-                                // 认怂, 变成跟随者
                                 status = NodeStatus.FOLLOWER;
                                 return false;
                             } // 没我大, 却失败了,说明 index 不对.或者 term 不对.
